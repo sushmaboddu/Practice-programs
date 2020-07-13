@@ -1,0 +1,28 @@
+<html>
+
+<body>
+
+    <p>Click the button, and display "green" if a boolean value is <em>true</em>, otherwise display "red".</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        Boolean.prototype.myColor = function() {
+            if (this.valueOf() == true) {
+                return "green";
+            } else {
+                return "red";
+            }
+        };
+
+        function myFunction() {
+            var a = true;
+            document.getElementById("demo").innerHTML = a.myColor();
+        }
+    </script>
+
+</body>
+
+</html>
